@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>AllianceCapitals</title>
+    <link rel="shortcut icon" type="text/css" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <script src="js/jquery.js"></script>
+    <script src="layer/layer.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/echarts.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<div id="header" style="">
+    <!--未登录的首页头部-->
+    <div class="head-row unlisted">
+        <div>
+            <a href="index.html">
+                <img src="images/logo.png">
+            </a>
+        </div>
+        <div>
+           <!--  <a class="btns">Sign up</a>
+            <a class="btns">Sign in</a> -->
+            <span>
+                <label>En</label><i class="iconfont icon-xiala"></i>
+                <div class="lang">
+                    <ul>
+                       <li><a>简体中文</a><img src="images/cn.png"></li>
+                       <li><a>繁体中文</a><img src="images/hk.png"></li>
+                       <li><a>English</a><img src="images/flag_en.jpg"></li>
+                       <em></em>
+                  </ul>
+                </div>
+            </span>
+        </div>
+    </div>
+    <!--未登录结束-->
+    <!--登录后的首页头部-->
+   <!--  <div class="head-row login">
+        <div><img src="images/logo.png"></div>
+        <div class="login-right">
+            <label>Welcome， <a>Zack</a></label>
+            <span>
+                <label>En</label><i class="iconfont icon-xiala"></i>
+                <div class="lang">
+                    <ul>
+                       <li><a>简体中文</a><img src="images/cn.png"></li>
+                       <li><a>繁体中文</a><img src="images/hk.png"></li>
+                       <li><a>English</a><img src="images/flag_en.jpg"></li>
+                       <em></em>
+                  </ul>
+                </div>
+            </span>
+            <strong><i class="iconfont icon-caidan"></i></strong>
+
+        </div>
+    </div> -->
+    <!--登录后结束-->
+</div>
+<div class="login">
+	<div class="main-login">
+		<ul>
+			<li class="login-left">
+				<div class="login-top  current">
+					<h3 class="title">SIGN IN</h3>
+					<p>Already our client?</p>
+					<p>Don't hesitate to enjoy big digita currency revolution. Please sign in to start trading.</p>
+				</div>
+				<div class="login-bottom ">
+					<h3 class="title">SIGN UP</h3>
+					<p>Not a client yet?</p>
+					<p>You might miss the big digital currency revolution. Please sign up to seize it.</p>
+				</div>
+				<p class="btn-or">
+					or
+				</p>
+			</li>
+			<li class="login-right">
+				<div class="signIn">
+					<h3 class="title">SIGN IN</h3>
+					<form action="" method="post" onsubmit="return check()">
+						<div class="form-group account">
+							<input type="text" name="account" class="Account" placeholder="Please enter your account" onblur="accountReg()">
+							<span class="userError"></span>
+						</div>
+						<div class="form-group password">
+							<input type="password" name="signInPass" class="Password" placeholder="Please enter password" onblur="passwordReg()">
+							<span class="passError"></span>
+						</div>
+						<div class="form-group signBottom">
+							<div class="leftcheck">
+								<input type="checkbox" name="signInCheck" value="rembered" id="rembered">  Keep me signed in on this computer.
+							</div>
+							<div class="rightForget">
+								<a href="#" class="forgotPass">Forgot password?</a>
+							</div>
+						</div>
+						<div class="form-group submit">
+							<input type="submit" name="signInBtn" class="signBtn" value="Sign in" onclick="signIn()">
+						</div>
+					</form>
+				</div>
+				<div class="signUp" style="display:none">
+					<h3 class="title">SIGN UP</h3>
+					<form action="" method="" >
+						<div class="form-group account">
+							<input type="text" name="userName" class="userName" placeholder="Please enter your name" onblur="userNameReg()">
+							<span class="upUserError"></span>
+						</div>
+						<div class="form-group password upEmail">
+							<input type="email" name="email" class="email" placeholder="Please enter your Email" onblur="emailReg()">
+							<span class="emailRight"></span>
+						</div>
+						<div class="form-group password upEmailAgain">
+							<input type="email" name="emailAgain" class="emailAgain" placeholder="Please enter your Email again" onblur="emailAgainReg()">
+							<span class="emailReRight"></span>
+						</div>
+						<div class="form-group password upPassP">
+							<input type="password" name="upPass" class="upPassReg" placeholder="Please enter your password" onblur="upPassReg()">
+							<span class="upPass"></span>
+						</div>
+						<div class="form-group password upPassPAgain">
+							<input type="password" name="upPassA" class="upPassAgain" placeholder="Please enter password again" onblur="upPassAgain()">
+							<span class="passReRight"></span>
+						</div>
+						<div class="form-group password">
+							<input type="text" name="vCode" placeholder="Please enter verification code">
+							<span class="verifiCode"><img src="images/verifiCode.png"></span>
+						</div>
+						<div class="form-group signBottom">
+							<div class="leftcheck" id="layerDemo">
+								<input type="checkbox" name="checkBox" value="rembered" id="">&nbsp;I have read <a href="#" class="treams"> Treams and Conditions</a> and agreed to <a href="javascript:0" class="privacy">Privacy Policy</a>.
+							</div>
+							<!-- <div class="rightForget">
+								<a href="#">Forgot password?</a>
+							</div> -->
+						</div>
+						<div class="form-group submit" >
+							<input type="submit" name="submitButton" class="signUpBtn" value="Sign Up" onclick="signUp()">
+						</div>
+					</form>
+				</div>
+				<ul class="forgetPassStep">
+					<li class="steps">
+						<div class="forgotTop">
+							<h3 class="title">RESET PASSWORD</h3>
+							<div>
+								<span class="leftStep">1</span><span>/3step</span>
+							</div>
+						</div>
+						<div class="stepItem step1">
+							<p>Please enter your Email address. Verification code will be sent to the Email box.</p>
+							<div class="form-group password forgetPass1">
+								<input type="email" name="forgetP1" class="forgetEmailReg" placeholder="Please enter your Email" onblur="forgetEmailReg()">
+								<span class="forgetEmailRight"></span>
+							</div>
+							<div class="form-group submit" >
+								<input type="button" name="subForgetP1" class="nextTo2" value="Next">
+							</div>
+						</div>
+						<div class="stepItem step2">
+							<p>The verification code has been sent to <a href="#" class="Ebox">annie_zhu_123456@gmail</a>.com.Please get it from your mailbox and fill in the following input box.Thank you!</p>
+							<div class="form-group password forgetPass2">
+								<input type="text" name="forgetP2" maxlength="4" class="forgetVCode" placeholder="Please enter verification code" onblur="forgetPassVCode()">
+								<span class="forgetVCodeInfo"></span>
+							</div>
+							<div class="form-group submit" >
+								<input type="button" name="subForgetP2" class="nextTo3" value="Next">
+							</div>
+						</div>
+						<div class="stepItem step3">
+							<div class="form-group password forgetPass31">
+								<input type="text" name="forgetP3" placeholder="Please enter your password" onblur="forgetPass1()">
+								<!-- <span class="emailRight">Great.Please move on.</span> -->
+							</div>
+							<div class="form-group password forgetPass32">
+								<input type="text" name="againForgetP3" placeholder="Please enter your password again" onblur="forgetPass2()">
+								<!-- <span class="emailRight">Great.Please move on.</span> -->
+							</div>
+							<div class="form-group submit" >
+								<input type="button" name="subForgetP3" class="nextToLogin" value="Next">
+							</div>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">	
+// console.log(navigator.userAgent)
+// if (/(iPhone|iPad|iPod|iOS|Android)/.test(navigator.userAgent)) {
+//     window.location.href ="trade.html";
+// }
+$(".signUp .privacy").on("click",function(){
+	layer.open({
+		type: 1,
+		area: ['40%','50%'],
+		title: 'Privacy policy',
+		shadeClose: false,
+		shade:[.6,'#121111'],
+		scrollbar: false,
+		anim:0,
+		content: '\<\div style="padding:20px"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>\<\/div>'
+	});
+})
+$(".signUp .treams").on("click",function(){
+	layer.open({
+		type: 1,
+		area: ['40%','50%'],
+		title: 'Treams and Conditions',
+		shadeClose: false,
+		shade:[.6,'#121111'],
+		scrollbar: false,
+		anim:0,
+		content: '\<\div style="padding:20px"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>\<\/div>'
+	});
+})
+function accountReg(){
+    //正则表达验证账号格式
+    var accountReg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    //如果账号为空
+    if($(".Account").val() ==''){
+        $(".userError").text('Account cannot be empty!').show().css('color','#dc3030');
+        $(".signIn .form-group.account").css("border-color","#376fd1");
+    }else if(!accountReg.test($('.Account').val())){
+        $(".userError").text('Formatting error！').show().css('color','#dc3030');
+        $(".signIn .form-group.account").css("border-color","#376fd1");
+    }else if(accountReg.test($('[name=account]').val())){
+    	$(".userError").text("Great to see you again!").show().css('color','#5fcc29');
+    	$(".signIn .form-group.account").css("border-color","#4c567f");
+    }
+}
+function passwordReg(){
+    if($('.Password').val() == ''){
+        $('.passError').text("Please input a password!").show().css('color','#dc3030');
+        $(".signIn .form-group.password").css("border-color","#376fd1");
+    }else if($('.Password').val() === '123456'){
+    	$('.passError').text("Great to see you again!").show().css('color','#5fcc29');
+    	$(".signIn .form-group.password").css("border-color","#376fd1");
+    }else{
+    	$('.passError').text("Sorry! Try again please.").show().css('color','#dc3030');
+    	$(".signIn .form-group.password").css("border-color","#4c567f");
+    }
+}
+function userNameReg(){
+	var userReg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    if($(".userName").val() == ''){
+    	$(".upUserError").text('enter one user name').show().css('color','#dc3030');
+    	$(".signUp .form-group.account").css("border-color","#376fd1");
+    }else if(!userReg.test($(".userName").val())){
+    	$(".upUserError").text('Incorrect username format！').show().css('color','#dc3030');
+    	$(".signUp .form-group.account").css("border-color","#376fd1");
+    }else if(userReg.test($(".userName").val())){
+    	$(".upUserError").text('Nice name!！').show().css('color','#5fcc29');
+    	$(".signUp .form-group.account").css("border-color","#4c567f");
+    }
+}
+function emailReg(){
+	var userReg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    if($(".email").val() == ''){
+    	$(".emailRight").text('Please enter the mailbox').show().css('color','#dc3030');
+    	$(".signUp .form-group.upEmail").css("border-color","#376fd1");
+    }else if(!userReg.test($(".email").val())){
+    	$(".emailRight").text('Incorrect mailbox format！').show().css('color','#dc3030');
+    	$(".signUp .form-group.upEmail").css("border-color","#376fd1");
+    }else if(userReg.test($(".email").val())){
+    	$(".emailRight").text('Great.Please move on！').show().css('color','#5fcc29');
+    	$(".signUp .form-group.upEmail").css("border-color","#4c567f");
+    }
+}
+function emailAgainReg(){
+	var userReg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    if($(".emailAgain").val() == ''){
+    	$(".emailReRight").text('Please enter mailbox again!').show().css('color','#dc3030');
+    	$(".signUp .form-group.upEmailAgain").css("border-color","#376fd1");
+    }else if($(".emailAgain").val() !== $(".email").val()){
+    	$(".emailReRight").text('Two input inconsistencies！').show().css('color','#dc3030');
+    	$(".signUp .form-group.upEmailAgain").css("border-color","#376fd1");
+    }else if($(".emailAgain").val() == $(".email").val() ){
+    	$(".emailReRight").text('Great.Please move on！').show().css('color','#5fcc29');
+    	$(".signUp .form-group.upEmailAgain").css("border-color","#4c567f");
+    }
+}
+function upPassReg(){
+	var upPassReg = /^[a-zA-Z0-9_]*$/;
+	if($('.upPassReg').val() == ''){
+        $('.upPass').text("Please input a password!").show().css('color','#dc3030');
+        $(".signUp .form-group.upPassP").css("border-color","#376fd1");
+    }else if( !upPassReg.test($('.upPassReg').val()) || $('.upPassReg').val().length <= 6 || $('.upPassReg').val().length >= 16){
+    	$('.upPass').text(" 6-16 letters numbers underlines").show().css('color','#dc3030');
+    	$(".signUp .form-group.upPassP").css("border-color","#376fd1");
+    }else if(  upPassReg.test($('.upPassReg').val()) && $('.upPassReg').val().length >= 6 && $('.upPassReg').val().length <= 16 ){
+    	$('.upPass').text("High level security.").show().css('color','#5fcc29');
+    	$(".signUp .form-group.upPassP").css("border-color","#4c567f");
+    }
+}
+function upPassAgain(){
+	if($('.upPassAgain').val() == ''){
+		$('.passReRight').text("Please enter password again!").show().css('color','#dc3030');
+		$(".signUp .form-group.upPassPAgain").css("border-color","#376fd1");
+	}else if($('.upPassAgain').val() !== $('.upPassReg').val()){
+		$('.passReRight').text("Two input inconsistencies!").show().css('color','#dc3030');
+		$(".signUp .form-group.upPassPAgain").css("border-color","#376fd1");
+	}else if($('.upPassAgain').val() == $('.upPassReg').val()){
+		$('.passReRight').text("Wll done").show().css('color','#5fcc29');
+		$(".signUp .form-group.upPassPAgain").css("border-color","#4c567f");
+	}
+}
+function forgetEmailReg(){
+	var forUserReg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    if($(".forgetEmailReg").val() == ''){
+    	$(".forgetEmailRight").text('Please enter the mailbox').show().css('color','#dc3030');
+    	$(".forgetPassStep .step1 .form-group.password").css('border-color','#376fd1');
+    }else if(!forUserReg.test($(".forgetEmailReg").val())){
+    	$(".forgetEmailRight").text('Incorrect mailbox format！').show().css('color','#dc3030');
+    	$(".forgetPassStep .step1 .form-group.password").css('border-color','#376fd1');
+    }else if(forUserReg.test($(".forgetEmailReg").val())){
+    	$(".forgetEmailRight").text('Great.Please move on！').show().css('color','#5fcc29');
+    	$(".forgetPassStep .step1 .form-group.password").css('border-color','#414758');
+    }
+}
+function forgetPassVCode(){
+	var forgetVCode = /^[a-zA-Z0-9_]*$/;
+	if($('.forgetVCode').val() == ''){
+        $('.forgetVCodeInfo').text("Please input the code!").show().css('color','#dc3030');
+        $(".forgetPassStep .step2 .form-group.password").css('border-color','#376fd1');
+    }else if( $('.forgetVCode').val()  !== "1234"){
+    	$('.forgetVCodeInfo').text("Verification code error!").show().css('color','#dc3030');
+    	$(".forgetPassStep .step2 .form-group.password").css('border-color','#376fd1');
+    }else if( $('.forgetVCode').val()  == "1234" ){  //默认为1234，应该为后台ajax返回
+    	$('.forgetVCodeInfo').text("High level security.").show().css('color','#5fcc29');
+    	$$(".forgetPassStep .step2 .form-group.password").css('border-color','#414758');
+    }
+}
+function forgetPass1(){
+
+}
+function forgetPass2(){
+	
+}
+function check(){
+	if($(".signIn form").serialize()){
+		console.log(1)
+		accountReg();
+		passwordReg();
+		console.log($(".signIn form").serialize())
+		return false;
+	}else{
+		console.log(2)
+	}
+}
+function signIn(){
+	// accountReg();
+	// passwordReg();
+}
+function signUp(){
+	userNameReg();
+	emailReg();
+	emailAgainReg();
+	upPassReg();
+	upPassAgain();
+	return false;
+	// alert($(".signUp form").serialize())
+}
+</script>
+</body>
+</html>

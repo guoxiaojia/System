@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AllianceCapitals</title>
+    <link rel="shortcut icon" type="text/css" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!--PC导航-->
+<div id="head">
+    <!--未登录的首页头部-->
+    <div class="head-row unlisted">
+        <div>
+            <a href="javascript:;">
+                <img src="images/logo.png">
+            </a>
+        </div>
+        <div>
+            <a href="login.html" class="btns">Sign up</a>
+            <a href="login.html" class="btns">Sign in</a>
+            <span>
+                <label>En</label><i class="iconfont icon-xiala"></i>
+                <div class="lang">
+                    <ul>
+                       <li><a>简体中文</a><img src="images/cn.png"></li>
+                       <li><a>繁体中文</a><img src="images/hk.png"></li>
+                       <li><a>English</a><img src="images/flag_en.jpg"></li>
+                       <em></em>
+                  </ul>
+                </div>
+            </span>
+        </div>
+    </div>
+    <!--未登录结束-->
+    <!--登录后的首页头部-->
+    <div class="head-row login">
+        <div><a><img src="images/logo.png"></a></div>
+        <div class="login-right">
+            <label>Welcome， <a>Zack</a></label>
+            <span>
+                <label>En</label><i class="iconfont icon-xiala"></i>
+                <div class="lang">
+                    <ul>
+                       <li><a>简体中文</a><img src="images/cn.png"></li>
+                       <li><a>繁体中文</a><img src="images/hk.png"></li>
+                       <li><a>English</a><img src="images/flag_en.jpg"></li>
+                       <em></em>
+                  </ul>
+                </div>
+            </span>
+            <strong class="index0"><i class="iconfont icon-caidan"></i></strong>
+
+        </div>
+    </div>
+    <!--登录后结束-->
+    
+</div>
+<!--移动端头部-->
+<div id="hearter-phone">
+    <div class="leftbtn">
+        <a><img width="22" height="17" src="images/left-btn.png"></a>
+    </div>
+    <div class="rightlogo">
+        <a href="index.html"><img src="images/logo.png"></a>
+    </div>
+    <!--未登录-->
+    <div class="unlisted-phon">
+        <div class="listphon">
+            <ul class="phon-list">
+                <li><a href="login.html" class="btns">Sign up</a></li>
+                <li><a href="login.html" class="btns">Sign in</a></li>
+            </ul>
+            <div class="phon-bottom">
+                <div class="hengxian">
+                    <a><img src="images/cn.png"></a>
+                </div>
+                <div class="hengxian">
+                    <a><img src="images/flag_en.jpg"></a>
+                </div>
+                <div>
+                    <a><img src="images/hk.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--登录后显示菜单-->
+    <div class="login-phon">
+        <div class="listphon">
+            <ul>
+                <li class="userphon">
+                    <a><label>Welcome， <span>Zack</span></label></a>
+                </li>
+                <li><a href="trade.html">Trading</a></li>
+                <li><a href="order.html">Orders</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="user.html">Account</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="#" class="logout">Logout</a></li>
+            </ul>
+            <div class="phon-bottom">
+                <div class="hengxian">
+                    <a><img src="images/cn.png"></a>
+                </div>
+                <div class="hengxian">
+                    <a><img src="images/flag_en.jpg"></a>
+                </div>
+                <div>
+                    <a><img src="images/hk.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--移动端头部结束-->
+<div id="fullPage">
+    <div class="section">
+        <div class="slide bg bg1">
+            <p class="wow zoomIn">Seize the Opportunity Enjoy this Digital Currency Revolution</p>
+            <div class="getNow wow bounceInUp" class="" data-wow-delay="400ms">
+                <a href="trade.html" >Get Started Now</a>
+            </div>
+            <div class="footer">
+                <ul class="footerItem">
+                    <li>
+                        <table class="lineDate">
+                            <thead >
+                                <tr >
+                                   <th colspan="3">Bitcoin(BTC)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.12345678</td>
+                                    <td>USD</td>
+                                    <td class="down">0.18%<img src="images/down.png"></td>
+                                </tr>
+                                <tr>
+                                    <td>0.10015661</td>
+                                    <td>EUP</td>
+                                    <td class="up">1.02%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>0.10015661</td>
+                                    <td>ETH</td>
+                                    <td class="down">0.102%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Ethereum(ETH)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.12345678</td>
+                                    <td>USD</td>
+                                    <td class="up">0.18%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>123.2</td>
+                                    <td>EUP</td>
+                                    <td class="down">0.120%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Rapidz(RPZ)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.12345678</td>
+                                    <td>BTC</td>
+                                    <td class="up">0.18%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>0.1001</td>
+                                    <td>ETH</td>
+                                    <td class="down">0.102%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Ripple(XRP)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.10111101</td>
+                                    <td>BTC</td>
+                                    <td class="up">0.18%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>2.123</td>
+                                    <td>ETH</td>
+                                    <td class="down">0.102%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Litecoin(LTC)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.12345678</td>
+                                    <td>BTC</td>
+                                    <td class="up">0.18%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>0.1001</td>
+                                    <td>ETH</td>
+                                    <td class="down">0.102%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Ripple(XRP)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.0000001</td>
+                                    <td>BTC</td>
+                                    <td class="up">0.18%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>2.12345</td>
+                                    <td>ETH</td>
+                                    <td class="down">1.102%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Dash (DASH)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.12345678</td>
+                                    <td>BTC</td>
+                                    <td class="down">0.18%<span><img src="images/down.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>0.10015661</td>
+                                    <td>ETH</td>
+                                    <td class="up">0.102%<span><img src="images/up.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">IZEcoin(ETH)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.12345678</td>
+                                    <td>BTC</td>
+                                    <td class="up">0.18%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>0.10015661</td>
+                                    <td>ETH</td>
+                                    <td class="down">0.102%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <table class="lineDate">
+                            <thead>
+                                <tr>
+                                   <th colspan="3">7Coinz(7CZ)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0.12345678</td>
+                                    <td>BTC</td>
+                                    <td class="up">0.18%<span><img src="images/up.png"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>0.10015661</td>
+                                    <td>ETH</td>
+                                    <td class="down">0.102%<span><img src="images/down.png"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide bg bg2">
+            <div class="echar" style="width: 100%; height: 100%; position: relative;">
+                <!--<video src="images/echerts.mp4" height="100%" width="100%" autoplay="autoplay"></video>-->
+            </div>
+        </div>
+        <div class="slide bg bg3">
+            <div class="bgScale"></div>
+            <div class="container">
+                <span class="wow zoomIn centerText">How to get started</span>
+                <ul class="wrapper-therd">
+                    <li class="wow bounceInLeft" data-wow-delay="600ms">
+                        <div class="topImg">
+                            <img src="images/therd-ico1.png">
+                        </div>
+                        <h5>Sign up</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
+                        <a href="trade.html">
+                            <img src="images/therd-right.png">
+                        </a>
+                    </li>
+                    <li style="margin-top: 218px" class="wow bounceInUp" data-wow-delay="900ms">
+                        <div class="topImg">
+                            <img src="images/therd-ico2.png">
+                        </div>
+                        <h5>Authentication</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
+                        <a href="trade.html">
+                            <img src="images/therd-right.png">
+                        </a>
+                    </li>
+                    <li class="wow bounceInRight" data-wow-delay="600ms">
+                        <div class="topImg">
+                            <img src="images/therd-ico3.png">
+                        </div>
+                        <h5>Sign up</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
+                        <a href="trade.html">
+                            <img src="images/therd-right.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slide bg bg4">
+            <div class="bg4-row">
+                <div class="bg4-left">
+                    <div class="cryp  wow bounce" data-wow-delay=".4s">
+                        alliancecaptitals platform
+                        features
+                    </div>
+                </div>
+                <div class="bg4-right">
+                </div>
+            </div>
+            <!--定位-->
+            <div class="positioning">
+                 <div class="box">
+                     <div class="box-row box1">
+                         <div class="small-row">
+                             <div class="wen">
+                                 <span class="title0">Rapid trading</span>
+                                 <p>
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+                                 </p>
+                             </div>
+                             <div class="rap-tu">
+                                 <span class="img">
+                                 <img src="images/icon_fast.png">
+                                     <div class="xian">
+                                     </div>
+                                </span>
+                             </div>
+                         </div>
+                         <div class="small-row rightSmall">
+                             <div class="tru-tu">
+                                 <span class="img">
+                                     <img src="images/icon_trust.png">
+                                     <div class="xian2"></div>
+                                 </span>
+                             </div>
+                             <div class="wen">
+                                 <span class="title0">Trusted platform</span>
+                                 <p>
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="box-row box2">
+                         <div class="small-row">
+                             <div class="wen">
+                                 <span class="title0">Security</span>
+                                 <p>
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+                                 </p>
+                             </div>
+                             <div class="sec-tu">
+                                 <span class="img">
+                                     <img src="images/icon_security.png">
+                                     <div class="xian3"></div>
+                                 </span>
+                             </div>
+                         </div>
+                         <div class="small-row rightSmall">
+                             <div class="pri-tu">
+                                 <span class="img">
+                                     <img src="images/icon_privacy.png">
+                                     <div class="xian4"></div>
+                                 </span>
+                             </div>
+                             <div class="wen">
+                                 <span class="title0">Privacy insurance</span>
+                                 <p>
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="box-row box3">
+                         <div class="small-row">
+                             <div class="wen">
+                                 <span class="title0">Easy to use</span>
+                                 <p>
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+                                 </p>
+                             </div>
+                             <div class="easy-tu">
+                                 <span class="img">
+                                     <img src="images/icon_easy.png">
+                                     <div class="xian5"></div>
+                                 </span>
+                             </div>
+                         </div>
+                         <div class="small-row rightSmall">
+                             <div class="tran-tu">
+                                 <span class="img">
+                                     <img src="images/icon_transparent.png">
+                                     <div class="xian6"></div>
+                                 </span>
+                             </div>
+                             <div class="wen">
+                                 <span class="title0">Transparent fee</span>
+                                 <p>
+                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                <div class="middlebtn">
+                      <span>
+                          <img class="wow flipInX" data-wow-delay=".4s"  src="images/logo_feature.png">
+                      </span>
+                </div>
+            </div>
+            <!--定位结束-->
+        </div>
+        <div class="slide bg bg5">
+            <div class="middleText">
+                <h4 class="title wow bounceInLeft">About AllianceCapitals</h4>
+                <p class="wow bounceInLeft" data-wow-delay="200ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                <p class="wow bounceInLeft" data-wow-delay="300ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+                <div class="startTrad wow bounceInLeft" data-wow-delay="400ms">
+                    <a href="trade.html" class="start">Start Trading</a>
+                </div>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li><a href="javascript:0">API Documentation</a></li>
+                    <li class="fline"><a href="javascript:0">Terms and Conditions</a></li>
+                    <li><a href="javascript:0">F.A.Q</a></li>
+                    <li class="fline"><a href="javascript:0">Privacy Policy</a></li>
+                    <li><a href="javascript:0">Contact AllianceCapitals</a></li>
+                </ul>
+                <div class="flogo">
+                    <a href="javascript:0">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="cropy">
+                    <span>© Copyright 2018 AllianceCapitals</span>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+<!--菜单弹框-->
+<div id="menu">
+  <div class="colu-menu">
+      <div class="btnn"><strong><i class="iconfont icon-caidan"></i></strong></div>
+      <ul>
+          <li><a href="trade.html">Trading</a></li>
+          <li><a href="order.html">Orders</a></li>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="user.html">Account</a></li>
+          <li><a href="help.html">Help</a></li>
+      </ul>
+      <div class="logout"><span>Logout</span></div>
+  </div>
+</div>
+<!--菜单弹框结束-->
+</body>
+</html>
+<script>
+    $(function(){
+        //打开页面就初始化动画
+        wow = new WOW({  animateClass: 'animated'});
+        wow.init();
+//        var login=false;//默认未登录false
+//        Login(login);
+
+        $("#fullPage").fullpage({
+            verticalCentered:false,
+            slidesNavigation:true,     //是否显示导航
+            slidesNavPosition: 'bottom',   //导航位置
+            loopHorizontal:false,  //禁止循环
+            afterRender: function() {
+                $('.fp-slidesNav ul li').click(function () {
+                    //切换实现动画效果
+                    wow = new WOW({  animateClass: 'animated'});
+                    wow.init();
+                    AnimatHide();//默认移除动画
+                    removeEchart();//移除echart图
+                    //第二屏
+                    if($(this).index()==1){
+                        return addEchart();//添加echart图
+                    }
+                    //第四屏
+                    if($(this).index()==3){
+                         return Animat(1000);//执行动画散开
+                    }
+                })
+            },
+        });
+        var scrollFunc = function (e) {  
+            e = e || window.event;  
+            if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件               
+                if (e.wheelDelta > 0) { //当滑轮向上滚动时  
+                    console.log("滑轮向上滚动"); 
+                    $.fn.fullpage.moveSlideLeft();
+                    wow = new WOW({  animateClass: 'animated'});
+                    wow.init();
+                    AnimatHide();//默认移除动画
+                    Animat(1000);//执行动画散开
+                    removeEchart();
+                    addEchart();//添加echart图
+                }  
+                if (e.wheelDelta < 0) { //当滑轮向下滚动时  
+                    console.log("滑轮向下滚动");
+                    $.fn.fullpage.moveSlideRight();
+                    wow = new WOW({  animateClass: 'animated'});
+                    wow.init();
+                    AnimatHide();//默认移除动画
+                    Animat(1000);//执行动画散开
+                    removeEchart();
+                    addEchart();//添加echart图
+                    // $.fn.fullpage.moveSlideRight();
+                }  
+            } else if (e.detail) {  //Firefox滑轮事件  
+                if (e.detail> 0) { //当滑轮向上滚动时  
+                    // console.log("滑轮向上滚动");  
+                    $.fn.fullpage.moveSlideLeft();
+                    wow = new WOW({  animateClass: 'animated'});
+                    wow.init();
+                    AnimatHide();//默认移除动画
+                    Animat(1000);//执行动画散开
+                    removeEchart();
+                    addEchart();//添加echart图
+                }  
+                if (e.detail< 0) { //当滑轮向下滚动时  
+                    // console.log("滑轮向下滚动");  
+                    $.fn.fullpage.moveSlideRight();
+                    wow = new WOW({  animateClass: 'animated'});
+                    wow.init();
+                    AnimatHide();//默认移除动画
+                    Animat(1000);//执行动画散开
+                    removeEchart();
+                    addEchart();//添加echart图
+                    // $.fn.fullpage.moveSlideRight();
+                }  
+            } 
+        }
+        document.onkeydown=function(event){
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if(e && e.keyCode==37){ 
+                wow = new WOW({  animateClass: 'animated'});
+                wow.init();
+                AnimatHide();//默认移除动画
+                Animat(1000);//执行动画散开
+            }
+            if(e && e.keyCode==39){ 
+                wow = new WOW({  animateClass: 'animated'});
+                wow.init();
+                AnimatHide();//默认移除动画
+                Animat(1000);//执行动画散开
+            }            
+        }; 
+    
+        window.onmousewheel = document.onmousewheel = scrollFunc;  
+    })
+</script> 
